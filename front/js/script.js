@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Cridem a l'endpoint de l'API fent un fetch
+    fetch("http://127.0.0.1:8000/alumne/list/all");
     ______________________________________________
         .then(response => {
             if (!response.ok) {
@@ -20,6 +21,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 row.appendChild(idCell);
 
                 // Repetir per tots els altres camps restants que retorna l'endpoint
+                const nomAluCell = document.createElement("td");
+                nomAluCell.textContent = alumne.NomAlumne;
+                row.appendChild(nomAluCell);
+
+                const cicleCell = document.createElement("td");
+                cicleCell.textContent = alumne.Cicle;
+                row.appendChild(cicleCell);
+
+                const cursCell = document.createElement("td");
+                cursCell.textContent = alumne.Curs;
+                row.appendChild(cursCell);
+
+                const grupCell = document.createElement("td");
+                grupCell.textContent = alumne.Grup;
+                row.appendChild(grupCell);
+
+                const aulaCell = document.createElement("td");
+                aulaCell.textContent = aula.DescAula;
+                row.appendChild(aulaCell);
                 _____________________________________________
 
                 
